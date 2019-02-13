@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using
 using DotNetGram.Models.Interfaces;
 
 namespace DotNetGram.Models.Services
@@ -11,7 +10,7 @@ namespace DotNetGram.Models.Services
     {
         public Task Delete(int id)
         {
-            
+            throw new NotImplementedException();
         }
 
         public Task<Post> FindPost(int id)

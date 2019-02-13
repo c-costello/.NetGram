@@ -9,8 +9,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace DotNetGram.Migrations
 {
     [DbContext(typeof(PostDbContext))]
-    [Migration("20190213182729_initial")]
-    partial class initial
+    [Migration("20190213202146_update1")]
+    partial class update1
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -26,11 +26,11 @@ namespace DotNetGram.Migrations
                         .ValueGeneratedOnAdd()
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
+                    b.Property<string>("Author");
+
                     b.Property<string>("Description");
 
                     b.Property<string>("Image");
-
-                    b.Property<string>("Author");
 
                     b.HasKey("ID");
 
@@ -40,37 +40,37 @@ namespace DotNetGram.Migrations
                         new
                         {
                             ID = 1,
+                            Author = "Clari",
                             Description = "Placeholder One",
-                            Image = "https://via.placeholder.com/150",
-                            Author = "Clari"
+                            Image = "https://via.placeholder.com/150"
                         },
                         new
                         {
                             ID = 2,
+                            Author = "Nate",
                             Description = "Placeholder Two",
-                            Image = "https://via.placeholder.com/150",
-                            Author = "Nate"
+                            Image = "https://via.placeholder.com/150"
                         },
                         new
                         {
                             ID = 3,
+                            Author = "Mike",
                             Description = "Placeholder Three",
-                            Image = "https://via.placeholder.com/150",
-                            Author = "Mike"
+                            Image = "https://via.placeholder.com/150"
                         },
                         new
                         {
                             ID = 4,
+                            Author = "Xia",
                             Description = "Placeholder Four",
-                            Image = "https://via.placeholder.com/150",
-                            Author = "Xia"
+                            Image = "https://via.placeholder.com/150"
                         },
                         new
                         {
                             ID = 5,
+                            Author = "Mike G.",
                             Description = "Placeholder Five",
-                            Image = "https://via.placeholder.com/150",
-                            Author = "Mike G."
+                            Image = "https://via.placeholder.com/150"
                         });
                 });
 #pragma warning restore 612, 618

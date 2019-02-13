@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace DotNetGram.Migrations
 {
-    public partial class initial : Migration
+    public partial class update1 : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -24,14 +24,14 @@ namespace DotNetGram.Migrations
 
             migrationBuilder.InsertData(
                 table: "Posts",
-                columns: new[] { "ID", "Description", "Image", "Author" },
+                columns: new[] { "ID", "Author", "Description", "Image" },
                 values: new object[,]
                 {
-                    { 1, "Placeholder One", "https://via.placeholder.com/150", "Clari" },
-                    { 2, "Placeholder Two", "https://via.placeholder.com/150", "Nate" },
-                    { 3, "Placeholder Three", "https://via.placeholder.com/150", "Mike" },
-                    { 4, "Placeholder Four", "https://via.placeholder.com/150", "Xia" },
-                    { 5, "Placeholder Five", "https://via.placeholder.com/150", "Mike G." }
+                    { 1, "Clari", "Placeholder One", "https://via.placeholder.com/150" },
+                    { 2, "Nate", "Placeholder Two", "https://via.placeholder.com/150" },
+                    { 3, "Mike", "Placeholder Three", "https://via.placeholder.com/150" },
+                    { 4, "Xia", "Placeholder Four", "https://via.placeholder.com/150" },
+                    { 5, "Mike G.", "Placeholder Five", "https://via.placeholder.com/150" }
                 });
         }
 

@@ -4,16 +4,20 @@
 
 @{ 
     var posts = await PostService.GetPosts();
+    Layout = "_Layout";
 }
-<h4><a asp-page="/Posts/Manage" asp-route-id="null">Add New Post</a></h4>
 
-
+<h4> Home </h4>
 @foreach  (var post in posts)
 {
-    <img src="@post.Image" />
-    <h3>Author: @post.Author</h3>
-    <p> @post.Description</p>
+    <section class="post-container">
+        <img src="@post.Image" />
+        <h2>Author: @post.Author</h2>
+        <p> @post.Description</p>
 
-    <p><a asp-page="/Posts/Index" asp-route-id="@post.ID">Get Details</a></p>
+        <p><a asp-page="/Posts/Index" asp-route-id="@post.ID">Get Details</a></p>
+     </section>
 }
+
+<h4><a asp-page="/Posts/Manage" asp-route-id="null">Add New Post</a></h4>
 

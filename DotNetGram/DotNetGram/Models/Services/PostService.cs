@@ -20,6 +20,7 @@ namespace DotNetGram.Models.Services
         {
             Post post = await _context.Posts.FindAsync(id);
             _context.Posts.Remove(post);
+            await _context.SaveChangesAsync();
 
         }
 

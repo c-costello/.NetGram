@@ -21,35 +21,35 @@ namespace DotNetGram.Data
                 {
                     ID = 1,
                     Image = "https://via.placeholder.com/150",
-                    Poster = "Clari",
+                    Author = "Clari",
                     Description = "Placeholder One"
                 },
                 new Post
                 {
                     ID = 2,
                     Image = "https://via.placeholder.com/150",
-                    Poster = "Nate",
+                    Author = "Nate",
                     Description = "Placeholder Two"
                 },
                 new Post
                 {
                     ID = 3,
                     Image = "https://via.placeholder.com/150",
-                    Poster = "Mike",
+                    Author = "Mike",
                     Description = "Placeholder Three"
                 },
                 new Post
                 {
                     ID = 4,
                     Image = "https://via.placeholder.com/150",
-                    Poster = "Xia",
+                    Author = "Xia",
                     Description = "Placeholder Four"
                 },
                 new Post
                 {
                     ID = 5,
                     Image = "https://via.placeholder.com/150",
-                    Poster = "Mike G.",
+                    Author = "Mike G.",
                     Description = "Placeholder Five"
                 }
             );

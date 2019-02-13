@@ -9,7 +9,7 @@ namespace DotNetGram.Models
     {
         public int ID { get; set; }
         public string Image { get; set; }
-        public string Poster { get; set; }
+        public string Author { get; set; }
         public string Description { get; set; }
 
     }

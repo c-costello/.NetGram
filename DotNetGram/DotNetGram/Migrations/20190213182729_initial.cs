@@ -14,7 +14,7 @@ namespace DotNetGram.Migrations
                     ID = table.Column<int>(nullable: false)
                         .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
                     Image = table.Column<string>(nullable: true),
-                    Poster = table.Column<string>(nullable: true),
+                    Author = table.Column<string>(nullable: true),
                     Description = table.Column<string>(nullable: true)
                 },
                 constraints: table =>
@@ -24,7 +24,7 @@ namespace DotNetGram.Migrations
 
             migrationBuilder.InsertData(
                 table: "Posts",
-                columns: new[] { "ID", "Description", "Image", "Poster" },
+                columns: new[] { "ID", "Description", "Image", "Author" },
                 values: new object[,]
                 {
                     { 1, "Placeholder One", "https://via.placeholder.com/150", "Clari" },

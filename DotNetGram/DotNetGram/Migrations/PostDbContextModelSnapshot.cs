@@ -28,7 +28,7 @@ namespace DotNetGram.Migrations
 
                     b.Property<string>("Image");
 
-                    b.Property<string>("Poster");
+                    b.Property<string>("Author");
 
                     b.HasKey("ID");
 
@@ -40,35 +40,35 @@ namespace DotNetGram.Migrations
                             ID = 1,
                             Description = "Placeholder One",
                             Image = "https://via.placeholder.com/150",
-                            Poster = "Clari"
+                            Author = "Clari"
                         },
                         new
                         {
                             ID = 2,
                             Description = "Placeholder Two",
                             Image = "https://via.placeholder.com/150",
-                            Poster = "Nate"
+                            Author = "Nate"
                         },
                         new
                         {
                             ID = 3,
                             Description = "Placeholder Three",
                             Image = "https://via.placeholder.com/150",
-                            Poster = "Mike"
+                            Author = "Mike"
                         },
                         new
                         {
                             ID = 4,
                             Description = "Placeholder Four",
                             Image = "https://via.placeholder.com/150",
-                            Poster = "Xia"
+                            Author = "Xia"
                         },
                         new
                         {
                             ID = 5,
                             Description = "Placeholder Five",
                             Image = "https://via.placeholder.com/150",
-                            Poster = "Mike G."
+                            Author = "Mike G."
                         });
                 });
 #pragma warning restore 612, 618

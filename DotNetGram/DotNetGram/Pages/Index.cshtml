@@ -11,7 +11,7 @@
 @foreach  (var post in posts)
 {
     <img src="@post.Image" />
-    <h3>Author: @post.Poster</h3>
+    <h3>Author: @post.Author</h3>
     <p> @post.Description</p>
 
     <p><a asp-page="/Posts/Index" asp-route-id="@post.ID">Get Details</a></p>

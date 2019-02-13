@@ -36,7 +36,7 @@ namespace DotNetGram.Pages.Posts
 
             post.ID = Post.ID;
             post.Image = Post.Image;
-            post.Poster = Post.Poster;
+            post.Author = Post.Author;
             post.Description = Post.Description;
 
             await _post.SaveAsync(post);

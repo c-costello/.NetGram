@@ -3,11 +3,11 @@
 @{
 }
 
-<h1>Edit Post</h1>
+<h1>Manage Post</h1>
 
 <img src="@Model.Post.Image" />
 <form method="post">
-    <input type="hidden" asp-for="Post.Image" value="@Model.Post.Image">
+    <input type="hidden" asp-for="Post.Image" value="https://via.placeholder.com/150">
     <input type="hidden" asp-for="Post.ID" value="@Model.Post.ID">
     <label asp-for=Post.Poster>Author</label>
     <input type="text" asp-for="Post.Poster" />

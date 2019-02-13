@@ -5,6 +5,8 @@
 @{ 
     var posts = await PostService.GetPosts();
 }
+<h4><a asp-page="/Posts/Manage" asp-route-id="null">Add New Post</a></h4>
+
 
 @foreach  (var post in posts)
 {
@@ -14,3 +16,4 @@
 
     <p><a asp-page="/Posts/Index" asp-route-id="@post.ID">Get Details</a></p>
 }
+

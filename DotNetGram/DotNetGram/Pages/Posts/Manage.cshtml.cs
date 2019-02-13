@@ -41,7 +41,7 @@ namespace DotNetGram.Pages.Posts
 
             await _post.SaveAsync(post);
 
-            return RedirectToPage("Posts/Index", new { id = post.ID });
+            return RedirectToPage("/Posts/Index", new { id = post.ID });
 
         }
 

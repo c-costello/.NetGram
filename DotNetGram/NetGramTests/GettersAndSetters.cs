@@ -1,4 +1,6 @@
+using DotNetGram.Data;
 using DotNetGram.Models;
+using Microsoft.EntityFrameworkCore;
 using System;
 using Xunit;
 

@@ -1,0 +1,12 @@
+﻿@page "{id}"
+@model DotNetGram.Pages.Posts.IndexModel
+@{
+}
+
+<section>
+    <img src="@Model.Post.Image" />
+    <h3> Author: @Model.Post.Poster</h3>
+    <p> Description: @Model.Post.Description</p>
+</section>
+
+<a asp-page="/Posts/Manage" asp-route-id="@Model.Post.ID">Edit Post</a>

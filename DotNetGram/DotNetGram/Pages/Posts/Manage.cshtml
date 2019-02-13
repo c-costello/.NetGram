@@ -1,4 +1,20 @@
-﻿@page
+﻿@page "{id}"
 @model DotNetGram.Pages.Posts.ManageModel
 @{
 }
+
+<h1>Edit Post</h1>
+
+<img src="@Model.Post.Image" />
+<form method="post">
+    <label asp-for=Post.Poster>Author</label>
+    <input type="text" asp-for="Post.Poster" />
+
+    <label asp-for=Post.Description>Description</label>
+    <input type="text" asp-for="Post.Description" />
+
+    <button type="submit">Save Changes</button>
+    <button type="submit" asp-page-handler="Delete">Delete Post</button>
+
+</form>
+

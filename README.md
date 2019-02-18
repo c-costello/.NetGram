@@ -2,7 +2,7 @@
 Utilizing  SQL Database and Blob Storage, upload images with an author and a description. Scroll through images with the ability add, edit, view and delete posts.
 
 ## Deployment 
-![Click Here to See Deployment](https://dottnetgram.azurewebsites.net/);
+[Click Here to See Deployment](https://dottnetgram.azurewebsites.net/);
 
 ## Instructions
 - To Create A New Post

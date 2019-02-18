@@ -13,15 +13,24 @@ namespace DotNetGram.Pages.Posts
     {
         private readonly IPost _post;
 
+        /// <summary>
+        /// Constructor
+        /// </summary>
+        /// <param name="post"></param>
         public IndexModel(IPost post)
         {
             _post = post;
         }
 
+        //Properties
         [FromRoute]
         public int ID { get; set; }
         public Post Post { get; set; }
 
+        /// <summary>
+        /// On Get, Get list of all posts
+        /// </summary>
+        /// <returns>Task</returns>
         public async Task OnGet()
         {
             Post = await _post.FindPost(ID);

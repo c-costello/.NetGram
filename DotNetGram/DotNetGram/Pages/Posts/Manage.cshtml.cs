@@ -17,19 +17,20 @@ namespace DotNetGram.Pages.Posts
     {
         private readonly IPost _post;
 
-
+        //Properties
         public Models.Util.Blob BlobImg { get; set; }
-
         [FromRoute]
         public int? ID { get; set; }
-
-
         [BindProperty]
         public Post Post { get; set; }
-
         [BindProperty]
         public IFormFile Image { get; set; }
 
+        /// <summary>
+        /// Constructor
+        /// </summary>
+        /// <param name="post">IPost</param>
+        /// <param name="configuration">IConfiguration</param>
         public ManageModel(IPost post, IConfiguration configuration)
         {
             _post = post;
@@ -37,11 +38,19 @@ namespace DotNetGram.Pages.Posts
             BlobImg = new Models.Util.Blob(configuration);
         }
 
+        /// <summary>
+        /// On get, find post by ID, or create new post
+        /// </summary>
+        /// <returns>Task</returns>
         public async Task OnGet()
         {
             Post = await _post.FindPost(ID.GetValueOrDefault()) ?? new Post();
         }
 
+        /// <summary>
+        /// On post, Save Post Async
+        /// </summary>
+        /// <returns>Task IActionResult</returns>
         public async Task<IActionResult> OnPost()
         {
             var post = await _post.FindPost(ID.GetValueOrDefault()) ?? new Post();
@@ -76,6 +85,10 @@ namespace DotNetGram.Pages.Posts
 
         }
 
+        /// <summary>
+        /// Delete post
+        /// </summary>
+        /// <returns>Task IActionResult</returns>
         public async Task<IActionResult> OnPostDelete()
         {
             await _post.Delete(ID.Value);

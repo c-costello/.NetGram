@@ -9,13 +9,21 @@ namespace DotNetGram.Data
 {
     public class PostDbContext : DbContext
     {
+        /// <summary>
+        /// Configure options, PostDBContext constructor 
+        /// </summary>
+        /// <param name="options"></param>
         public PostDbContext(DbContextOptions<PostDbContext> options) : base(options)
         {
 
         }
-
+        /// <summary>
+        /// Create seed data, creates database tables
+        /// </summary>
+        /// <param name="modelBuilder">ModelBuilder</param>
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+            //Seed Data
             modelBuilder.Entity<Post>().HasData(
                 new Post
                 {

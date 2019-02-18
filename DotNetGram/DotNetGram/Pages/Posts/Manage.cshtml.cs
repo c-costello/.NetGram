@@ -33,7 +33,7 @@ namespace DotNetGram.Pages.Posts
         public ManageModel(IPost post, IConfiguration configuration)
         {
             _post = post;
-            //Blob Stoarge account to be refferenced
+            //Blob Storage account to be refferenced
             BlobImg = new Models.Util.Blob(configuration);
         }
 

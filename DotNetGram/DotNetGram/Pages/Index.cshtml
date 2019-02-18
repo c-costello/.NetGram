@@ -9,7 +9,9 @@
 @foreach  (var post in posts)
 {
     <section class="post-container">
-        <img src="@post.Image" />
+        <div class="img-contain">
+            <img src="@post.Image" />
+        </div>
         <h2>Author: @post.Author</h2>
         <p> @post.Description</p>
 

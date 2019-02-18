@@ -5,7 +5,9 @@
 }
 
 <section class="post-container">
-    <img src="@Model.Post.Image" />
+    <div class="img-contain">
+        <img src="@Model.Post.Image" />
+    </div>
     <form method="post" enctype="multipart/form-data">
         <label asp-for="Image">Upload Image</label>
         <input asp-for="Image" type="file" />
@@ -20,7 +22,7 @@
             <textarea rows=4 asp-for="Post.Description"></textarea>
         </div>
         <div class="form-container">
-           <button type="submit">Save Changes</button>
+            <button type="submit">Save Changes</button>
             <button type="submit" asp-page-handler="Delete">Delete Post</button>
         </div>
 

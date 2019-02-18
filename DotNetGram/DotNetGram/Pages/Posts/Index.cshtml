@@ -4,7 +4,9 @@
     Layout = "_Layout";
 }
 <section class="post-container">
-    <img src="@Model.Post.Image" />
+    <div class="img-contain">
+        <img src="@Model.Post.Image" />
+    </div>
     <h2> Author: @Model.Post.Author</h2>
     <p> Description: @Model.Post.Description</p>
     <a asp-page="/Posts/Manage" asp-route-id="@Model.Post.ID">Edit Post</a>

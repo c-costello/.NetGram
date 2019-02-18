@@ -49,6 +49,12 @@ main div {
     flex-flow: column
 }
 
+.img-contain{
+    max-height: 280px;
+    height: 65vw;
+    margin-top: auto;
+    margin-bottom: auto;
+}
 img {
     max-width: 280px;
     width: 65vw;

@@ -1,22 +1,31 @@
 ﻿@page "{id}"
 @model DotNetGram.Pages.Posts.ManageModel
 @{
+    Layout = "_Layout";
 }
 
-<h1>Manage Post</h1>
+<section class="post-container">
+    <div class="img-contain">
+        <img src="@Model.Post.Image" />
+    </div>
+    <form method="post" enctype="multipart/form-data">
+        <label asp-for="Image">Upload Image</label>
+        <input asp-for="Image" type="file" />
 
-<img src="@Model.Post.Image" />
-<form method="post">
-    <input type="hidden" asp-for="Post.Image" value="https://via.placeholder.com/150">
-    <input type="hidden" asp-for="Post.ID" value="@Model.Post.ID">
-    <label asp-for=Post.Poster>Author</label>
-    <input type="text" asp-for="Post.Poster" />
+        <input type="hidden" asp-for="Post.ID" value="@Model.Post.ID">
+        <div class="form-container">
+            <label asp-for=Post.Author>Author</label>
+            <input type="text" asp-for="Post.Author" />
+        </div>
+        <div class="form-container">
+            <label asp-for=Post.Description>Description</label>
+            <textarea rows=4 asp-for="Post.Description"></textarea>
+        </div>
+        <div class="form-container">
+            <button type="submit">Save Changes</button>
+            <button type="submit" asp-page-handler="Delete">Delete Post</button>
+        </div>
 
-    <label asp-for=Post.Description>Description</label>
-    <input type="text" asp-for="Post.Description" />
-
-    <button type="submit">Save Changes</button>
-    <button type="submit" asp-page-handler="Delete">Delete Post</button>
-
-</form>
+    </form>
+</section>
 

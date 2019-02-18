@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace DotNetGram.Migrations
 {
-    public partial class initial : Migration
+    public partial class update1 : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -14,7 +14,7 @@ namespace DotNetGram.Migrations
                     ID = table.Column<int>(nullable: false)
                         .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
                     Image = table.Column<string>(nullable: true),
-                    Poster = table.Column<string>(nullable: true),
+                    Author = table.Column<string>(nullable: true),
                     Description = table.Column<string>(nullable: true)
                 },
                 constraints: table =>
@@ -24,14 +24,14 @@ namespace DotNetGram.Migrations
 
             migrationBuilder.InsertData(
                 table: "Posts",
-                columns: new[] { "ID", "Description", "Image", "Poster" },
+                columns: new[] { "ID", "Author", "Description", "Image" },
                 values: new object[,]
                 {
-                    { 1, "Placeholder One", "https://via.placeholder.com/150", "Clari" },
-                    { 2, "Placeholder Two", "https://via.placeholder.com/150", "Nate" },
-                    { 3, "Placeholder Three", "https://via.placeholder.com/150", "Mike" },
-                    { 4, "Placeholder Four", "https://via.placeholder.com/150", "Xia" },
-                    { 5, "Placeholder Five", "https://via.placeholder.com/150", "Mike G." }
+                    { 1, "Clari", "Placeholder One", "https://via.placeholder.com/150" },
+                    { 2, "Nate", "Placeholder Two", "https://via.placeholder.com/150" },
+                    { 3, "Mike", "Placeholder Three", "https://via.placeholder.com/150" },
+                    { 4, "Xia", "Placeholder Four", "https://via.placeholder.com/150" },
+                    { 5, "Mike G.", "Placeholder Five", "https://via.placeholder.com/150" }
                 });
         }
 

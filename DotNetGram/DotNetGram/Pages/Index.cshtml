@@ -6,8 +6,6 @@
     var posts = await PostService.GetPosts();
     Layout = "_Layout";
 }
-
-<h4> Home </h4>
 @foreach  (var post in posts)
 {
     <section class="post-container">

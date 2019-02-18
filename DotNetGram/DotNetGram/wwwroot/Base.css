@@ -29,8 +29,11 @@ main{
     min-height: 100vh;
     padding-top: 7vh;
     padding-bottom: 2vh;
+}
+main div {
     display: flex;
     justify-content: center;
+    flex-direction: column;
 }
 
 .post-container{

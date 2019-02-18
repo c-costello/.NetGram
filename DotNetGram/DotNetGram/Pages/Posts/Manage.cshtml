@@ -5,10 +5,11 @@
 }
 
 <section class="post-container">
-    <h4>Manage Post</h4>
     <img src="@Model.Post.Image" />
-    <form method="post">
-        <input type="hidden" asp-for="Post.Image" value="https://via.placeholder.com/250">
+    <form method="post" enctype="multipart/form-data">
+        <label asp-for="Image">Upload Image</label>
+        <input asp-for="Image" type="file" />
+
         <input type="hidden" asp-for="Post.ID" value="@Model.Post.ID">
         <div class="form-container">
             <label asp-for=Post.Author>Author</label>

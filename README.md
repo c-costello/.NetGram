@@ -25,7 +25,10 @@ Utilizing  SQL Database and Blob Storage, upload images with an author and a des
 
 
 ## Sample Views
-
+![Home](Assets/home.PNG)
+![Details](Asssets/view.PNG)
+![Edit/Delete](Assets/edit.PNG)
+![Create](Assets/create.PNG)
 
 ## Technologies Used
 - Languages

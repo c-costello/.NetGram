@@ -13,13 +13,21 @@ namespace DotNetGram.Models.Util
         public CloudStorageAccount CloudStorageAccount { get; set; }
         public CloudBlobClient CloudBlobClient { get; set; }
 
+        /// <summary>
+        /// Set Configuration
+        /// </summary>
+        /// <param name="configuration">IConfiguration</param>
         public Blob(IConfiguration configuration)
         {
             CloudStorageAccount = CloudStorageAccount.Parse(configuration["ConnectionStrings:BlobConnectionString"]);
             CloudBlobClient = CloudStorageAccount.CreateCloudBlobClient();
         }
 
-        //Get Container
+        /// <summary>
+        /// Get Container
+        /// </summary>
+        /// <param name="containerName">string</param>
+        /// <returns>Task\<CloudBlobContainer\></returns>
         public async Task<CloudBlobContainer> GetContainer(string containerName)
         {
             CloudBlobContainer cbc = CloudBlobClient.GetContainerReference(containerName);
@@ -28,7 +36,13 @@ namespace DotNetGram.Models.Util
 
             return cbc;
         }
-        //Get Blob
+
+        /// <summary>
+        /// Get Blob (Image)
+        /// </summary>
+        /// <param name="imageName">string</param>
+        /// <param name="containerName">string</param>
+        /// <returns>Task<CloudBlob></returns>
         public async Task<CloudBlob> GetBlob(string imageName, string containerName)
         {
             CloudBlobContainer container = await GetContainer(containerName);
@@ -38,6 +52,13 @@ namespace DotNetGram.Models.Util
             return blob;
         }
 
+        /// <summary>
+        /// Upload image to blob storage
+        /// </summary>
+        /// <param name="cloudBlobContainer">CloudBlobContainer</param>
+        /// <param name="fileName">string</param>
+        /// <param name="filePath">string</param>
+        /// <returns></returns>
         public async Task UploadImage(CloudBlobContainer cloudBlobContainer, string fileName, string filePath)
         {
             var blobFile = cloudBlobContainer.GetBlockBlobReference(fileName);
